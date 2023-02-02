@@ -6,7 +6,7 @@ namespace WebAplikazioa.Services
     {
         //Task<IList<ArdoaUpeltegi>> GetMota(int id);
         Task<List<PartidaModel>> GetPartidak();
-        Task<List<PartidaModel>> GetPartidaOnenak();
+        Task<List<PartidaModel>> GetPartidaOnenak(int zenbat);
         Task<PartidaModel> GetPartida(int id);
     }
 }

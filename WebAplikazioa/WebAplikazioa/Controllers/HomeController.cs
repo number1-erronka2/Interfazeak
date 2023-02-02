@@ -41,7 +41,7 @@ namespace WebAplikazioa.Controllers
         {
             //return View();
             List<PartidaModel> jokalariOnenakList = new List<PartidaModel>();
-            jokalariOnenakList = await _partidaService.GetPartidaOnenak();
+            jokalariOnenakList = await _partidaService.GetPartidaOnenak(10);
             return View(jokalariOnenakList);
             
             

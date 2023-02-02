@@ -6,6 +6,6 @@ namespace WebAplikazioa.Services
     {
         //Task<IList<ArdoaUpeltegi>> GetMota(int id);
         Task<List<LangileaModel>> GetLangileak();
-        Task<LangileaModel> GetLangilea(int id);
+        Task<LangileaModel> GetLangilea(string user);
     }
 }

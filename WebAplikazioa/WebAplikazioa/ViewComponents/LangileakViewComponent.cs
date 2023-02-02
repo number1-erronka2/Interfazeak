@@ -10,10 +10,12 @@ namespace Wineshop.ViewComponents
         {
             _langileaService = langileaService;
         }
+        /*
         public async Task<IViewComponentResult> InvokeAsync(int id)
         {
             ViewBag.mota = id;
             return View(await _langileaService.GetLangilea(id));
         }
+        */
     }
 }

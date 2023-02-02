@@ -1,13 +1,8 @@
 ﻿using Newtonsoft.Json;
 using WebAplikazioa.Models;
 
-namespace WebAplikazioa.Services
-{
-    public class LangileaService : ILangileaService
-    {
-
-
-
+namespace WebAplikazioa.Services {
+    public class LangileaService : ILangileaService {
         /*sortuogun rest apiko helbidi berton ipini (odoo edo datu atzipeneku????)
         ariña ze datu dauezan gordeta jakin
         Mongoko datubasin gordeko di datu danak?(ikusi erronkako dokumentuko grafiku).
@@ -36,41 +31,28 @@ namespace WebAplikazioa.Services
         }*/
 
 
-
-
-
-
-
-
-
-
-
         //datubaseak:
         //partida(id,user,puntuazioa,data) PK=id FK=user
         //langilea(e-mail,izena,user,jaiotza-data,taldea) PK=user
 
 
-        public async Task<List<LangileaModel>> GetLangileak()
-        {
+        public async Task<List<LangileaModel>> GetLangileak() {
             List<LangileaModel> langileaList = new List<LangileaModel>();
-            using (var httpClient = new HttpClient())
-            {
-                using (var response = await httpClient.GetAsync(rutaTodos))
-                {
+            using (var httpClient = new HttpClient()) {
+                using (var response = await httpClient.GetAsync(rutaTodos)) {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     langileaList = JsonConvert.DeserializeObject<List<LangileaModel>>(apiResponse);
                 }
             }
+
             return langileaList;
         }
-        public async Task<LangileaModel> GetLangilea(int id)
-        {
+
+        public async Task<LangileaModel> GetLangilea(string user) {
             LangileaModel langileaList = new LangileaModel();
-            Uri rutaLangileBat = new Uri(rutaTodos, id.ToString());
-            using (var httpClient = new HttpClient())
-            {
-                using (var response = await httpClient.GetAsync(rutaLangileBat))
-                {
+            Uri rutaLangileBat = new Uri(rutaTodos, user);
+            using (var httpClient = new HttpClient()) {
+                using (var response = await httpClient.GetAsync(rutaLangileBat)) {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     langileaList = JsonConvert.DeserializeObject<LangileaModel>(apiResponse);
                 }
