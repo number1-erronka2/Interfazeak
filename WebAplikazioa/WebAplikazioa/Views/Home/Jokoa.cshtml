@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    var argazkiPath = Directory.GetCurrentDirectory(); //asp-route-id dekon balixu rekuperaubida
 }
 <h1>@ViewData["Title"]</h1>
 
@@ -10,5 +11,24 @@
 
 <div class="text-center">
     <h1>@ViewData["Title"]</h1>
+    <h1>KAIXOKA</h1>
+    <p>@argazkiPath</p>
+
+    @if(argazkiPath == "1")
+    {
+        <img class="d-block w-100" src="~/images/banner1.jpg" alt="First slide">
+    }
+    @if (argazkiPath == "2")
+    {
+        <img class="d-block w-100" src="~/images/banner2.jpg" alt="First slide">
+    }
+    @if (argazkiPath == "3")
+    {
+        <img class="d-block w-100" src="~/images/banner3.jpg" alt="First slide">
+    }
+    @if (argazkiPath == "4")
+    {
+        <img class="d-block w-100" src="~/images/banner1.jpg" alt="First slide">
+    }
     
 </div>

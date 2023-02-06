@@ -8,12 +8,13 @@ namespace WebAplikazioa.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IPartidaService _partidaService;
-        
-        public HomeController(ILogger<HomeController> logger, IPartidaService jokoaService)
+        //private readonly IPartidaService _partidaService;
+
+        //public HomeController(ILogger<HomeController> logger, IPartidaService jokoaService)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _partidaService = jokoaService;
+            //_partidaService = jokoaService;
         }
 
         public IActionResult Index()
@@ -30,7 +31,20 @@ namespace WebAplikazioa.Controllers
         //datu basigaz hemen konektau edo "jokoa" barrun?
         public IActionResult Jokoa(int z)
         {
-            return View();
+            switch (z) //web orri bat zabaldu eta z arabera eduki ezberdiñe
+            {
+                case 1:
+                    return View(Jokoa);
+                case 2:
+                    return View(Jokoa);
+                case 3:
+                    return View(Jokoa);
+                case 4:
+                    return View(Jokoa);
+                default:
+                    return View(); //
+            }
+            //return View();
         }
 
         //jokuntzako eta jokalarixentzako model eta service desberdiñek
@@ -39,14 +53,14 @@ namespace WebAplikazioa.Controllers
 
         public async Task<IActionResult> Jokalari_onenak() //model hartzeko. Partida a
         {
-            //return View();
-            List<PartidaModel> jokalariOnenakList = new List<PartidaModel>();
+            return View();
+            /*List<PartidaModel> jokalariOnenakList = new List<PartidaModel>();
             jokalariOnenakList = await _partidaService.GetPartidaOnenak();
             return View(jokalariOnenakList);
             
             
             //danak bueltaukozkuz
-            //beste metodo bat sortubikoda?
+            //beste metodo bat sortubikoda?*/
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
