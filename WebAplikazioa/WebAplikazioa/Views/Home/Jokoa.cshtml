@@ -1,34 +1,94 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
-    var argazkiPath = Directory.GetCurrentDirectory(); //asp-route-id dekon balixu rekuperaubida
+    ViewData["JokOn"] = "Puntu gehien lortu dituzten jokalariak";
+    //var argazkiPath = Directory.GetCurrentDirectory(); //asp-route-id dekon balixu rekuperaubida
+
+
+    int zen = Convert.ToInt16(ViewData["zenbaki"]);
+
+    <!--Joko izena-->
+    var jok1Izen = "AAA";
+    var jok2Izen = "BBB";
+    var jok3Izen = "CCC";
+    var jok4Izen = "DDD";
+
+
+    <!--Jokalari onenak-->
+    var jok1Onena1 = "AAA";
+    var jok1Onena2 = "AAA";
+    var jok1Onena3 = "AAA";
+
+    var jok2Onena1 = "BBB";
+    var jok2Onena2 = "BBB";
+    var jok2Onena3 = "BBB";
+
+    var jok3Onena1 = "CCC";
+    var jok3Onena2 = "CCC";
+    var jok3Onena3 = "CCC";
+
+    var jok4Onena1 = "DDD";
+    var jok4Onena2 = "DDD";
+    var jok4Onena3 = "DDD";
+
+
+    <!--Joko balorazioa-->
+    <!--baloretako botoie be gehittu-->
+    int jok1Puntu = 1;
+    int jok2Puntu = 2;
+    int jok3Puntu = 3;
+    int jok4Puntu = 4;
 }
-<h1>@ViewData["Title"]</h1>
-
-
 
 <!--PartidaModel.cs fitxategixen dauena erabili?-->
 
 
-<div class="text-center">
-    <h1>@ViewData["Title"]</h1>
-    <h1>KAIXOKA</h1>
-    <p>@argazkiPath</p>
+<div class="text-center">    
 
-    @if(argazkiPath == "1")
+    @switch (zen)
     {
-        <img class="d-block w-100" src="~/images/banner1.jpg" alt="First slide">
+        case 1:
+            <h1>@jok1Izen</h1>
+            <img class="d-block w-100" src="~/images/banner1.jpg" alt="First slide">
+            <p>Jokoak jasotako balorazioa: @jok1Puntu</p>
+            <br />
+            <h3>@ViewData["JokOn"]</h3>
+            <p>@jok1Onena1</p>
+            <p>@jok1Onena2</p>
+            <p>@jok1Onena3</p>
+            break;
+        case 2:
+            <h1>@jok2Izen</h1>
+            <img class="d-block w-100" src="~/images/banner2.jpg" alt="First slide">
+            <p>Jokoak jasotako balorazioa: @jok2Puntu</p>
+            <br />
+            <h3>@ViewData["JokOn"]</h3>
+            <p>@jok2Onena1</p>
+            <p>@jok2Onena2</p>
+            <p>@jok2Onena3</p>
+            break;
+        case 3:
+            <h1>@jok3Izen</h1>
+            <img class="d-block w-100" src="~/images/banner3.jpg" alt="First slide">
+            <p>Jokoak jasotako balorazioa: @jok3Puntu</p>
+            <br />
+            <h3>@ViewData["JokOn"]</h3>
+            <p>@jok3Onena1</p>
+            <p>@jok3Onena2</p>
+            <p>@jok3Onena3</p>
+            break;
+        case 4:
+            <h1>@jok4Izen</h1>
+            <img class="d-block w-100" src="~/images/banner1.jpg" alt="First slide">
+            <p>Jokoak jasotako balorazioa: @jok4Puntu</p>
+            <br />
+            <h3>@ViewData["JokOn"]</h3>
+            <p>@jok4Onena1</p>
+            <p>@jok4Onena2</p>
+            <p>@jok4Onena3</p>
+            break;
+        default:
+            <h1>Ez dago "@zen" zenbakiari lotutako jokorik</h1>
+            break;
+
     }
-    @if (argazkiPath == "2")
-    {
-        <img class="d-block w-100" src="~/images/banner2.jpg" alt="First slide">
-    }
-    @if (argazkiPath == "3")
-    {
-        <img class="d-block w-100" src="~/images/banner3.jpg" alt="First slide">
-    }
-    @if (argazkiPath == "4")
-    {
-        <img class="d-block w-100" src="~/images/banner1.jpg" alt="First slide">
-    }
-    
+
 </div>

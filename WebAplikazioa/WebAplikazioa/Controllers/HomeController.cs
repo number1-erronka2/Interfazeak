@@ -1,12 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
 using WebAplikazioa.Models;
 using WebAplikazioa.Services;
 
 namespace WebAplikazioa.Controllers
 {
+    
     public class HomeController : Controller
     {
+
+        //http://192.168.65.123:8989/swagger-ui/index.html#/ REST APIA
+        //public static int a=1;
+
+
+
+
         private readonly ILogger<HomeController> _logger;
         //private readonly IPartidaService _partidaService;
 
@@ -29,22 +38,20 @@ namespace WebAplikazioa.Controllers
 
         //jokun zenbakixe pasau. Gero datu basigaz konektau
         //datu basigaz hemen konektau edo "jokoa" barrun?
-        public IActionResult Jokoa(int z)
+        //public IActionResult Jokoa(int z)
+
+
+
+
+        //public static int a;
+        [Route("Home/Jokoa/{z}")]
+        public async Task<IActionResult> Jokoa(int z)
         {
-            switch (z) //web orri bat zabaldu eta z arabera eduki ezberdiñe
-            {
-                case 1:
-                    return View(Jokoa);
-                case 2:
-                    return View(Jokoa);
-                case 3:
-                    return View(Jokoa);
-                case 4:
-                    return View(Jokoa);
-                default:
-                    return View(); //
-            }
-            //return View();
+            //a = z;
+            ViewData["zenbaki"] = z;
+
+            //return View(Jokoa(z)); //bialdu a aldagaixe be. Return barrun bi aldagai
+            return View(Jokoa);
         }
 
         //jokuntzako eta jokalarixentzako model eta service desberdiñek
