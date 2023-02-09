@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MongoDB.Driver;
 using N1_WebAplikazioa.Data;
 using N1_WebAplikazioa.Models;
+using N1_WebAplikazioa.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,10 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+//Gure zerbitzuak
+builder.Services.AddScoped<IPartidaService, PartidaService>();
+builder.Services.AddScoped<ILangileaService, LangileaService>();
 
 var app = builder.Build();
 

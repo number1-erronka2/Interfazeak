@@ -1,0 +1,32 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Ranking";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Wall of fame</title>
+</head>
+<body>
+<div>
+    <h1>ranking wall of fame</h1> 
+</div>
+<div>
+<table>
+    <tr>
+        <th>Player</th>
+        <th>Score</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Player</td>
+            <td>@item.Score</td>
+        </tr>
+    }
+</table>
+</div>
+</body>
+</html>

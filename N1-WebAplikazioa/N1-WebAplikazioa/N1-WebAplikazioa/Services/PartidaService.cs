@@ -4,8 +4,8 @@ using N1_WebAplikazioa.Models;
 
 namespace N1_WebAplikazioa.Services; 
 
-public class PartidaService {
-    private Uri baseUri = new Uri("https://192.168.65.123/partidak/allPartida");
+public class PartidaService : IPartidaService {
+    private Uri baseUri = new Uri("http://192.168.65.123:8989/partidak/allPartida");
     
     public async Task<List<Partida>> GetPartidak() {
         List<Partida> partidaList = new List<Partida>();
@@ -40,7 +40,7 @@ public class PartidaService {
         }
         return partidaBerria;
     }
-    
+
     public async Task<Partida> UpdatePartida(Partida partida) {
         Partida partidaBerria = new Partida();
         using (var httpClient = new HttpClient()) {
