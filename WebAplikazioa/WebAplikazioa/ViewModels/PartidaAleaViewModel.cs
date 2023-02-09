@@ -1,6 +1,6 @@
-namespace WebAplikazioa.Models
+﻿namespace WebAplikazioa.ViewModels
 {
-    public class PartidaModel //HomeController.cs, Jokoak.cshtml eta Jokoa.cshtml fitxategietan erabiltzeko behar dena
+    public class PartidaAleaViewModel
     {
         public int Id { get; set; }
         public float Puntuazioa { get; set; }
@@ -10,6 +10,5 @@ namespace WebAplikazioa.Models
         //honek bixek "langilea" barrun daz
         public int Taldea { get; set; }
         public string Erabiltzailea { get; set; }
-        
     }
 }
