@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson;
+using MongoDB.Driver;
 using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
 using WebAplikazioa.Models;
@@ -47,15 +49,63 @@ namespace WebAplikazioa.Controllers
         [Route("Home/Jokoa/{z}")]
         public async Task<IActionResult> Jokoa(int z)
         {
-            //a = z;
+            /*//a = z;
             ViewData["zenbaki"] = z;
 
             //return View(Jokoa(z)); //bialdu a aldagaixe be. Return barrun bi aldagai
-            return View(Jokoa);
+            return View(Jokoa);*/
+
+
+
+
+
+            var a = "";
+
+            MongoClient dbClient = new MongoClient("mongodb://192.168.65.123:27017/");//http://192.168.65.123:8989/swagger-ui/index.html#/
+
+
+
+            /*var dbList = dbClient.ListDatabases().ToList(); //datubasi hartu
+
+            //Console.WriteLine("The list of databases on this server is: ");
+            foreach (var db in dbList)
+            {
+                Console.WriteLine(db); //hau biot???
+                a = a + db;
+            }*/
+
+            //honek erronka datu basin datuk erakutsi
+            IMongoDatabase db = dbClient.GetDatabase("erronka"); //datu basi
+
+
+            var cars = db.GetCollection<BsonDocument>("langileak"); //tauli
+
+
+            var filter = Builders<BsonDocument>.Filter.Eq("price", 29000);
+
+
+            var command = new BsonDocument { { "dbstats", 1 } };
+            var result = db.RunCommand<BsonDocument>(command);
+            a = (result.ToJson());
+            //a = a.ToString();
+
+
+
+
+
+
+
+
+            ViewData["zenbaki"] = z;
+            ViewData["idatzitakoa"] = a; //zozer bueltetandau
+            return View(); //zer bueltetan dau?
         }
 
+
+
+
         //jokuntzako eta jokalarixentzako model eta service desberdiñek
-        
+
         //joko bakoitzeko rankinga eta jokalari onenak
 
         public async Task<IActionResult> Jokalari_onenak() //model hartzeko. Partida a

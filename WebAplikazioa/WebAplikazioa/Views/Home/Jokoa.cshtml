@@ -4,6 +4,8 @@
 
 
     int zen = Convert.ToInt16(ViewData["zenbaki"]);
+    //var idatzitako = Convert.ToString(ViewData["idatzitakoa"]);
+    var idatzitako = ViewData["idatzitakoa"];
 
     <!--Joko izena-->
     var jok1Izen = "AAA";
@@ -54,6 +56,7 @@
             <p>@jok1Onena1</p>
             <p>@jok1Onena2</p>
             <p>@jok1Onena3</p>
+            <h3>Idatzitakoa: @ViewData["idatzitakoa"]</h3>
             break;
         case 2:
             <h1>@jok2Izen</h1>
