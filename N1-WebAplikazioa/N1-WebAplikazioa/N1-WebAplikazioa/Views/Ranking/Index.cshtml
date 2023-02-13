@@ -16,9 +16,17 @@
 <div>
     <h1>
         wall of
-        <select id="dropdown">
+        <select id="dropdownWallType">
             <option value="fame">fame</option>
             <option value="shame">shame</option>
+        </select>
+        of
+        <select id="dropdownGame">
+            <option value="all">all games</option>
+            <option value="mahi">MAHI Kingdom</option>
+            <option value="2taldea">(2taldea)</option>
+            <option value="pouni">Pouni</option>
+            <option value="johnny">Johnny</option>
         </select>
     </h1>
 </div>
@@ -29,6 +37,7 @@
             <th>Pos</th>
             <th>Player</th>
             <th>Score</th>
+            <th>Game</th>
             <th>Date</th>
         </tr>
         </thead>
@@ -37,9 +46,10 @@
             int count = 1;
             foreach (var partida in Model.PartidaVMList.Take(10)) {
                 <tr>
-                    <td>@count</td>
+                    <td>#@count</td>
                     <td>@partida.langilea.erabiltzailea</td>
                     <td>@partida.puntuazioa</td>
+                    <td>@partida.jokoIzena</td>
                     <td>@partida.data</td>
                 </tr>
                 count++;
@@ -56,6 +66,7 @@
             <th>Pos</th>
             <th>Player</th>
             <th>Score</th>
+            <th>Game</th>
             <th>Date</th>
         </tr>
         </thead>
@@ -64,9 +75,10 @@
             int count = 1;
             foreach (var partida in Model.PartidaVMList.Reverse().Take(10)) {
                 <tr>
-                    <td>@count</td>
+                    <td>#@count</td>
                     <td>@partida.langilea.erabiltzailea</td>
                     <td>@partida.puntuazioa</td>
+                    <td>@partida.jokoIzena</td>
                     <td>@partida.data</td>
                 </tr>
                 count++;
@@ -83,18 +95,23 @@
 <script>
     var wallOfFame = document.getElementById("walloffame");
     var wallOfShame = document.getElementById("wallofshame");
-    var dropdown = document.getElementById("dropdown");
+    var dropdownWallType = document.getElementById("dropdownWallType");
 
     wallOfShame.style.display = "none";
 
-    dropdown.addEventListener("change", function () {
-        if (dropdown.value === "fame") {
+    dropdownWallType.addEventListener("change", function () {
+        if (dropdownWallType.value === "fame") {
             wallOfFame.style.display = "inline-table";
             wallOfShame.style.display = "none";
         } else {
             wallOfFame.style.display = "none";
             wallOfShame.style.display = "inline-table";
         }
+    });
+    
+    var dropdownGame = document.getElementById("dropdownGame");
+    dropdownGame.addEventListener("change", function () {
+        const selectedGame = dropdownGame.value;
     });
 </script>
 </html>
