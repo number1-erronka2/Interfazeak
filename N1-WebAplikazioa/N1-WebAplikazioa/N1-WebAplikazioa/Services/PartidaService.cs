@@ -5,12 +5,13 @@ using N1_WebAplikazioa.Models;
 namespace N1_WebAplikazioa.Services; 
 
 public class PartidaService : IPartidaService {
-    private Uri baseUri = new Uri("http://192.168.65.123:8989/partidak/allPartida");
+    private Uri baseUri = new Uri("http://192.168.65.123:8989/partidak/");
     
     public async Task<List<Partida>> GetPartidak() {
         List<Partida> partidaList = new List<Partida>();
+        Uri rutaPartidak = new Uri(baseUri, "allPartida");
         using (var httpClient = new HttpClient()) {
-            using (var response = await httpClient.GetAsync(baseUri)) {
+            using (var response = await httpClient.GetAsync(rutaPartidak)) {
                 string apiResponse = await response.Content.ReadAsStringAsync();
                 partidaList = JsonConvert.DeserializeObject<List<Partida>>(apiResponse);
             }

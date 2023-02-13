@@ -7,7 +7,7 @@ public class Langilea {
     [Key]
     public string erabiltzailea { get; set; }
     public string izena { get; set; }
-    public DateOnly jaiotzeData { get; set; }
+    public DateTime jaiotzeData { get; set; }
     public int taldea { get; set; }
     
     public Langilea() {
