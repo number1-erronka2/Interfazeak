@@ -1,0 +1,100 @@
+﻿@model N1_WebAplikazioa.ViewModels.PartidaViewModel
+
+@{
+    ViewBag.Title = "Ranking"; //tutorial baten horrela ateatze zan
+    ViewData["Title"] = "Ranking";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Wall of fame</title>
+</head>
+<body>
+<div>
+    <h1>
+        wall of
+        <select id="dropdown">
+            <option value="fame">fame</option>
+            <option value="shame">shame</option>
+        </select>
+    </h1>
+</div>
+<div>
+    <table class="table table-striped" id="walloffame">
+        <thead>
+        <tr>
+            <th>Pos</th>
+            <th>Player</th>
+            <th>Score</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        @try {
+            int count = 1;
+            foreach (var partida in Model.PartidaVMList.Take(10)) {
+                <tr>
+                    <td>@count</td>
+                    <td>@partida.langilea.erabiltzailea</td>
+                    <td>@partida.puntuazioa</td>
+                    <td>@partida.data</td>
+                </tr>
+                count++;
+            }
+        }
+        catch (Exception ex) {
+            <p>An error occurred while retrieving the data from the REST API: @ex.Message</p>
+        }
+        </tbody>
+    </table>
+    <table class="table table-striped" id="wallofshame">
+        <thead>
+        <tr>
+            <th>Pos</th>
+            <th>Player</th>
+            <th>Score</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        @try {
+            int count = 1;
+            foreach (var partida in Model.PartidaVMList.Reverse().Take(10)) {
+                <tr>
+                    <td>@count</td>
+                    <td>@partida.langilea.erabiltzailea</td>
+                    <td>@partida.puntuazioa</td>
+                    <td>@partida.data</td>
+                </tr>
+                count++;
+            }
+        }
+        catch (Exception ex) {
+            <p>An error occurred while retrieving the data from the REST API: @ex.Message</p>
+        }
+        </tbody>
+    </table>
+</div>
+</body>
+
+<script>
+    var wallOfFame = document.getElementById("walloffame");
+    var wallOfShame = document.getElementById("wallofshame");
+    var dropdown = document.getElementById("dropdown");
+
+    wallOfShame.style.display = "none";
+
+    dropdown.addEventListener("change", function () {
+        if (dropdown.value === "fame") {
+            wallOfFame.style.display = "inline-table";
+            wallOfShame.style.display = "none";
+        } else {
+            wallOfFame.style.display = "none";
+            wallOfShame.style.display = "inline-table";
+        }
+    });
+</script>
+</html>
