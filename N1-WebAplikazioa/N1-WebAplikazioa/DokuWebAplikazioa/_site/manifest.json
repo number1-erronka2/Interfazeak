@@ -1,0 +1,378 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/malatse.peru/Desktop/GITHUB/Interfazeak/N1-WebAplikazioa/N1-WebAplikazioa/DokuWebAplikazioa",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "cz+K6w4dcfMoTJKr9huxgTNiZjobpxs2qy3wq+qFRt8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "wS9J/m3XsxLiLuyoyiEGej4foSArxIIDdQAv2e/03Cs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "3MVg4oWkbheTpnf7uPFLmJa7xPYfNZeBCJ2KulCbcMQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.Controllers.HomeController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.Controllers.HomeController.html",
+          "hash": "hgadG5XIVetQLTpTHbml3UhJ3l7LufPmf2C56c0Kn5k="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.Controllers.PartidaController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.Controllers.PartidaController.html",
+          "hash": "Vfv6L+8RBhh+opwOI35A9uSPdkJFOpTEiXelLKQL4pA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.Controllers.RankingController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.Controllers.RankingController.html",
+          "hash": "u7xGruLNQtQ3jf4/WQM4b7C8Ug7Sqr7f1DGmZCXoPvs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.Controllers.html",
+          "hash": "FnGZd5RzmQcdRvhREdga6WFjegoKLqA93FxtUZwmoLg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.Data.ApplicationDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.Data.ApplicationDbContext.html",
+          "hash": "46CmUQqQMaaBW42Ivr2MWO9NpSA/us35V9dMzkiPt3M="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.Data.Migrations.CreateIdentitySchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.Data.Migrations.CreateIdentitySchema.html",
+          "hash": "JvNyIRRa1lfZw8HDM9bv0T/e3GONCISMpgHFEbaYXl8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.Data.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.Data.Migrations.html",
+          "hash": "zqKQOyFy7JhapteINe9+q9QwX/gqM3cqG33mVTEsgXk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.Data.html",
+          "hash": "gJe52FT8jkP4I9uHUD+uqBL3sKw4E02NtO+Pqkx6Qz0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.Models.ErrorViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.Models.ErrorViewModel.html",
+          "hash": "DtJnJGZQ5pcecXUwlHL3QI6tzh9AajvwY/MqKPO2vAg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.Models.Langilea.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.Models.Langilea.html",
+          "hash": "M9b6VmHR0FDjTfcJw3WdAjoudwJAYnaIScodavhvOLI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.Models.Partida.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.Models.Partida.html",
+          "hash": "EAwlKLGMg5+HlBjOjlKWs08UEpzFEtNpdc4eHSecZw8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.Models.html",
+          "hash": "BbkWMEVqcbmeoqof45YpxKYJnVS3Hd0SrLM4t/OVbSI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.Services.ILangileaService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.Services.ILangileaService.html",
+          "hash": "tsNI7UfleuJ02opoqP89vhxUwczQgSnAmqblzZWAbg4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.Services.IPartidaService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.Services.IPartidaService.html",
+          "hash": "Ub2fvISb6UcK2XQjhCpvYrOicZdnopG69BJlZOit7QQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.Services.LangileaService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.Services.LangileaService.html",
+          "hash": "5S5cILTMIi1KFP48GkFIO7i7WjjD7/NPzzl6/mWiNaA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.Services.PartidaService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.Services.PartidaService.html",
+          "hash": "MAB5lLmdwW327HXbhKpDfuArIu2oQ+GWb3+nliOljT4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.Services.html",
+          "hash": "ASBsiF088W50v9RQGf8caNAMyClYbVQDSo4F+aJ7WjE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.ViewComponents.LangileakViewComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.ViewComponents.LangileakViewComponent.html",
+          "hash": "6SwxH4XXxxxQK3soTpCv4eovD+uDJZ8cCqwYw3yjNr8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.ViewComponents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.ViewComponents.html",
+          "hash": "OjSEW+LRnghF26KRUq3dpNBtCxMe6xOz8uCUtECTWDc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.ViewModels.PartidaViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.ViewModels.PartidaViewModel.html",
+          "hash": "JHDTCV/toJ2UKnVXCG5o6R94n3IpGRKenmrjf/KPBBc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/N1_WebAplikazioa.ViewModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/N1_WebAplikazioa.ViewModels.html",
+          "hash": "aRl4qF1RJsRAEnf8jgPP/TIbVfSyuK4CgdnC11F3LsQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "O7z/Kvh/iv9kBWRdw+p7wEo4vKahKkZ1MKAW4GuxjaI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "Oa9PuD4E1hvZnCkVjUgzNBX6S00Zo5YilamTERTZo54="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 21,
+          "skipped_file_count": 21
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

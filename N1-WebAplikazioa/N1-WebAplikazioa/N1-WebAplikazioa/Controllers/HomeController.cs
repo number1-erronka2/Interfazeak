@@ -11,6 +11,11 @@ public class HomeController : Controller {
         _logger = logger;
     }
 
+    //honek dokumentaziñoien agertzeko komentarixuk
+    /// <summary>
+    /// Index bueltau
+    /// </summary>
+    /// <returns></returns>
     public IActionResult Index() {
         return View();
     }
@@ -18,7 +23,15 @@ public class HomeController : Controller {
     public IActionResult Privacy() {
         return View();
     }
+    
+    //dokumentaziñoie agertzeko komanduk (visual studioko terminalin eitteku)
+    //cd DokuWineShop
+    //docfx serve _site -p 8081
 
+    /// <summary>
+    /// Jokalari onenak bueltau
+    /// </summary>
+    /// <returns></returns>
     public async Task<IActionResult> Jokalari_onenak()
     {
         return View();
