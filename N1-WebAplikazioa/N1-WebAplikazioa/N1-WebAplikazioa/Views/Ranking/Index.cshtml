@@ -1,4 +1,5 @@
-﻿@model N1_WebAplikazioa.ViewModels.PartidaViewModel
+﻿@using System.Diagnostics
+@model N1_WebAplikazioa.ViewModels.PartidaViewModel
 
 @{
     ViewBag.Title = "Ranking"; //tutorial baten horrela ateatze zan
@@ -43,17 +44,34 @@
         </thead>
         <tbody>
         @try {
+            <script>
+                var gametype = window.location.href.split("=")[1];
+                
+                if (gametype == null) {
+                    gametype = "all";
+                }
+                dropdownGame.value = gametype;
+                var count = 1;
+            </script>
             int count = 1;
             foreach (var partida in Model.PartidaVMList.Take(10)) {
+                Console.WriteLine("[WOF] Loaded an item");
                 <tr>
+                    <script></script>
                     <td>#@count</td>
                     <td>@partida.langilea.erabiltzailea</td>
                     <td>@partida.puntuazioa</td>
                     <td>@partida.jokoIzena</td>
                     <td>@partida.data</td>
+                    <script>
+                        if (gametype != "all" && gametype != "@partida.jokoIzena.ToLower()") {
+                            document.getElementById("walloffame").deleteRow(count);
+                        }
+                    </script>
                 </tr>
                 count++;
             }
+            Console.WriteLine("[WOF] done!");
         }
         catch (Exception ex) {
             <p>An error occurred while retrieving the data from the REST API: @ex.Message</p>
@@ -71,6 +89,7 @@
         </tr>
         </thead>
         <tbody>
+
         @try {
             int count = 1;
             foreach (var partida in Model.PartidaVMList.Reverse().Take(10)) {
@@ -90,8 +109,6 @@
         </tbody>
     </table>
 </div>
-</body>
-
 <script>
     var wallOfFame = document.getElementById("walloffame");
     var wallOfShame = document.getElementById("wallofshame");
@@ -111,7 +128,15 @@
     
     var dropdownGame = document.getElementById("dropdownGame");
     dropdownGame.addEventListener("change", function () {
-        const selectedGame = dropdownGame.value;
+        var url = window.location.href;
+        if (url.indexOf('?' > -1)) {
+            url = window.location.href.split('?')[0];
+        }
+        if (dropdownGame.value !== "all") {
+            url += "?game=" + dropdownGame.value;
+        }
+        window.location.href = url;
     });
 </script>
+</body>
 </html>
