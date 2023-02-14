@@ -24,7 +24,7 @@
         of
         <select id="dropdownGame">
             <option value="all">all games</option>
-            <option value="mahi">MAHI Kingdom</option>
+            <option value="mahikingdom">MAHI Kingdom</option>
             <option value="2taldea">(2taldea)</option>
             <option value="pouni">Pouni</option>
             <option value="johnny">Johnny</option>
@@ -54,11 +54,12 @@
                 var count = 1;
             </script>
             int count = 1;
-            foreach (var partida in Model.PartidaVMList.Take(10)) {
+            bool shouldBreak = false;
+            foreach (var partida in Model.PartidaVMList) {
                 Console.WriteLine("[WOF] Loaded an item");
                 <tr>
                     <script></script>
-                    <td>#@count</td>
+                    <td># <script>document.write(count)</script></td>
                     <td>@partida.langilea.erabiltzailea</td>
                     <td>@partida.puntuazioa</td>
                     <td>@partida.jokoIzena</td>
@@ -66,10 +67,15 @@
                     <script>
                         if (gametype != "all" && gametype != "@partida.jokoIzena.ToLower()") {
                             document.getElementById("walloffame").deleteRow(count);
+                            count--;
+                        }
+                        if (count > 10) {
+                           document.getElementById("walloffame").deleteRow(count);
+                           count--;
                         }
                     </script>
                 </tr>
-                count++;
+                <script>count++;</script>
             }
             Console.WriteLine("[WOF] done!");
         }
@@ -91,16 +97,34 @@
         <tbody>
 
         @try {
-            int count = 1;
-            foreach (var partida in Model.PartidaVMList.Reverse().Take(10)) {
+            <script>
+                var gametype = window.location.href.split("=")[1];
+                
+                if (gametype == null) {
+                    gametype = "all";
+                }
+                dropdownGame.value = gametype;
+                var count = 1;
+            </script>
+            foreach (var partida in Model.PartidaVMList.Reverse()) {
                 <tr>
-                    <td>#@count</td>
+                    <td># <script>document.write(count)</script></td>
                     <td>@partida.langilea.erabiltzailea</td>
                     <td>@partida.puntuazioa</td>
                     <td>@partida.jokoIzena</td>
                     <td>@partida.data</td>
+                        <script>
+                            if (gametype != "all" && gametype != "@partida.jokoIzena.ToLower()") {
+                                document.getElementById("wallofshame").deleteRow(count);
+                                count--;
+                            }
+                            if (count > 10) {
+                               document.getElementById("wallofshame").deleteRow(count);
+                               count--;
+                            }
+                        </script>
                 </tr>
-                count++;
+                <script>count++;</script>
             }
         }
         catch (Exception ex) {
