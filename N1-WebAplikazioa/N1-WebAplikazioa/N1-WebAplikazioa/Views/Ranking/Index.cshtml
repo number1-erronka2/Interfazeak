@@ -98,7 +98,7 @@
 
         @try {
             <script>
-                var gametype = window.location.href.split("=")[1];
+                var gametype = window.location.href.split("game=")[1];
                 
                 if (gametype == null) {
                     gametype = "all";
@@ -138,15 +138,31 @@
     var wallOfShame = document.getElementById("wallofshame");
     var dropdownWallType = document.getElementById("dropdownWallType");
 
-    wallOfShame.style.display = "none";
 
+  
     dropdownWallType.addEventListener("change", function () {
         if (dropdownWallType.value === "fame") {
+            if (window.location.href.indexOf("?") > -1) {
+                var temp = window.location.href.split("?")[1];
+                temp = temp.split("&")[1];
+                url = window.location.href.split("?")[0];
+                window.location.href = url + "?" + temp;
+            }
+            /*
             wallOfFame.style.display = "inline-table";
             wallOfShame.style.display = "none";
+             */
         } else {
+            if (window.location.href.indexOf("?") > -1) {
+                var temp = window.location.href.split("?")[1];
+                url = window.location.href.split("?")[0];
+                url += "?wall=shame";
+                window.location.href = url + "&" + temp;
+            }
+            /*
             wallOfFame.style.display = "none";
             wallOfShame.style.display = "inline-table";
+             */
         }
     });
     
@@ -154,13 +170,38 @@
     dropdownGame.addEventListener("change", function () {
         var url = window.location.href;
         if (url.indexOf('?' > -1)) {
-            url = window.location.href.split('?')[0];
+            url = window.location.href.split('game=')[0];
         }
         if (dropdownGame.value !== "all") {
-            url += "?game=" + dropdownGame.value;
+            if (url.indexOf('?') > -1)
+                url += "&game=" + dropdownGame.value;
+            else if (url.indexOf('?') === -1) {
+                url += "?game=" + dropdownGame.value;
+            } else {
+                url += "game=" + dropdownGame.value;
+            }
+        }
+        if (url.indexOf('&') > -1) {
+            url = url.replace("&&", "&");
         }
         window.location.href = url;
     });
+    
+    if (window.location.href.indexOf("wall=shame") > -1) {
+        dropdownWallType.value = "shame";
+        wallOfFame.style.display = "none";
+        wallOfShame.style.display = "inline-table";
+    } else {
+        dropdownWallType.value = "fame";
+        wallOfFame.style.display = "inline-table";
+        wallOfShame.style.display = "none";
+    }
+    
+   if (window.location.href.indexOf("game=") > -1) {
+        dropdownGame.value = window.location.href.split("game=")[1];
+    } else {
+        dropdownGame.value = "all";
+    }
 </script>
 </body>
 </html>
