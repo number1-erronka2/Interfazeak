@@ -1,0 +1,212 @@
+﻿@using System.Diagnostics
+@model N1_WebAplikazioa.ViewModels.PartidaViewModel
+
+@{
+    ViewBag.Title = "Ranking"; //tutorial baten horrela ateatze zan
+    ViewData["Title"] = "Ranking";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Wall of fame</title>
+</head>
+<body>
+<div>
+    <h1>
+        wall of
+        <select id="dropdownWallType">
+            <option value="fame">fame</option>
+            <option value="shame">shame</option>
+        </select>
+        of
+        <select id="dropdownGame">
+            <option value="all">all games</option>
+            <option value="mahikingdom">MAHI Kingdom</option>
+            <option value="2taldea">(2taldea)</option>
+            <option value="pouni">Pouni</option>
+            <option value="johnny">Johnny</option>
+        </select>
+    </h1>
+</div>
+<div>
+    <table class="table table-striped" id="walloffame">
+        <thead>
+        <tr>
+            <th>Pos</th>
+            <th>Player</th>
+            <th>Score</th>
+            <th>Game</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        @try {
+            <script>
+                //magia
+                var gametype = window.location.href.split("=")[1];
+                
+                if (gametype == null) {
+                    gametype = "all";
+                }
+                dropdownGame.value = gametype;
+                var count = 1;
+            </script>
+            int count = 1;
+            bool shouldBreak = false;
+            foreach (var partida in Model.PartidaVMList) {
+                <tr>
+                    <!-- postua (JS) -->
+                    <td># <script>document.write(count)</script></td>
+                    <!-- beste datu denak (C#) -->
+                    <td>@partida.langilea.erabiltzailea</td>
+                    <td>@partida.puntuazioa</td>
+                    <td>@partida.jokoIzena</td>
+                    <td>@partida.data</td>
+                    <script>
+                        //JS ze hau ez dakit C#en iten 
+                        if (gametype != "all" && gametype != "@partida.jokoIzena.ToLower()") {
+                            document.getElementById("walloffame").deleteRow(count);
+                            count--;
+                        }
+                        if (count > 10) {
+                           document.getElementById("walloffame").deleteRow(count);
+                           count--;
+                        }
+                    </script>
+                </tr>
+                <script>count++;</script>
+            }
+        }
+        catch (Exception ex) {
+            <p>An error occurred while retrieving the data from the REST API: @ex.Message</p>
+        }
+        </tbody>
+    </table>
+    <table class="table table-striped" id="wallofshame">
+        <thead>
+        <tr>
+            <th>Pos</th>
+            <th>Player</th>
+            <th>Score</th>
+            <th>Game</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        @try {
+            <script>
+                //magia x2
+                var gametype = window.location.href.split("game=")[1];
+                
+                if (gametype == null) {
+                    gametype = "all";
+                }
+                dropdownGame.value = gametype;
+                var count = 1;
+            </script>
+            foreach (var partida in Model.PartidaVMList.Reverse()) {
+                <tr>
+                    <!-- postua (JS) -->
+                    <td># <script>document.write(count)</script></td>
+                    <!-- beste datu denak (C#) -->
+                    <td>@partida.langilea.erabiltzailea</td>
+                    <td>@partida.puntuazioa</td>
+                    <td>@partida.jokoIzena</td>
+                    <td>@partida.data</td>
+                    <script>
+                            if (gametype != "all" && gametype != "@partida.jokoIzena.ToLower()") {
+                                document.getElementById("wallofshame").deleteRow(count);
+                                count--;
+                            }
+                            if (count > 10) {
+                               document.getElementById("wallofshame").deleteRow(count);
+                               count--;
+                            }
+                        </script>
+                </tr>
+                <script>count++;</script>
+            }
+        }
+        catch (Exception ex) {
+            <p>An error occurred while retrieving the data from the REST API: @ex.Message</p>
+        }
+        </tbody>
+    </table>
+</div>
+<script>
+    //JS oso epikua (ez dakit ezta nola in deten)
+    var wallOfFame = document.getElementById("walloffame");
+    var wallOfShame = document.getElementById("wallofshame");
+    var dropdownWallType = document.getElementById("dropdownWallType");
+
+
+  
+    dropdownWallType.addEventListener("change", function () { //wall of fame/shame aukeratzean
+        if (dropdownWallType.value === "fame") { //wall of fame
+            if (window.location.href.indexOf("?") > -1) {
+                var temp = window.location.href.split("?")[1];
+                temp = temp.split("&")[1];
+                url = window.location.href.split("?")[0];
+                window.location.href = url + "?" + temp;
+            }
+            /*
+            wallOfFame.style.display = "inline-table";
+            wallOfShame.style.display = "none";
+             */
+        } else { //wall of shame
+            var temp = window.location.href.split("?")[1];
+            url = window.location.href.split("?")[0];
+            url += "?wall=shame";
+            if (temp != null) { //joko batean badago
+                window.location.href = url + "&" + temp;
+            } else { //all games-en badago
+                window.location.href = url;
+            }
+        }
+    });
+    
+    var dropdownGame = document.getElementById("dropdownGame"); 
+    dropdownGame.addEventListener("change", function () { //jokoa aukeratzean
+        var url = window.location.href;
+        if (url.indexOf('?' > -1)) { //url-ak ez badu ?
+            url = window.location.href.split('game=')[0];
+        }
+        if (dropdownGame.value !== "all") { //joko guztietan ez badago
+            if (url.indexOf('?') > -1)
+                url += "&game=" + dropdownGame.value;
+            else if (url.indexOf('?') === -1) { //url-ak ez badu ?
+                url += "?game=" + dropdownGame.value;
+            } else { //bestela
+                url += "game=" + dropdownGame.value;
+            }
+        }
+        
+        //url-ak & bikoiztuta badu (batzutan ez du funtzionatzen, baina orriak ondo egiten du)
+        if (url.indexOf('&') > -1) { 
+            url = url.replace("&&", "&");
+        }
+        window.location.href = url; //url-a aldatu
+    });
+    
+    if (window.location.href.indexOf("wall=shame") > -1) { //taulen aldaketa
+        dropdownWallType.value = "shame";
+        wallOfFame.style.display = "none";
+        wallOfShame.style.display = "inline-table";
+    } else {
+        dropdownWallType.value = "fame";
+        wallOfFame.style.display = "inline-table";
+        wallOfShame.style.display = "none";
+    }
+    
+    if (window.location.href.indexOf("game=") > -1) {
+        dropdownGame.value = window.location.href.split("game=")[1];
+    } else {
+        dropdownGame.value = "all";
+    }
+</script>
+</body>
+</html>
