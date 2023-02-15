@@ -8,7 +8,7 @@ using N1_WebAplikazioa.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add the database variables
-var client = new MongoClient("mongodb://192.168.65.123:27017"); //bestinak be gehitzeko
+var client = new MongoClient("mongodb://192.168.65.123:27017");
 var database = client.GetDatabase("erronka");
 var partidaCollection = database.GetCollection<Partida>("partida");
 
