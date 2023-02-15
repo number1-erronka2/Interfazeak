@@ -15,25 +15,34 @@ public class HomeController : Controller {
     /// <summary>
     /// Index bueltau
     /// </summary>
-    /// <returns></returns>
+    /// <returns>index</returns>
     public IActionResult Index() {
         return View();
     }
 
     public IActionResult Privacy() {
+        /// <summary>
+        /// Index bueltau
+        /// </summary>
+        /// <returns>index</returns>
         return View();
     }
-    
+
     //dokumentaziñoie agertzeko komanduk (visual studioko terminalin eitteku)
     //cd DokuWineShop
+    //docfx serve _site -p 8081
+
+    //komentarixon bat gehitzeko
+    //docfx docfx.json
     //docfx serve _site -p 8081
 
     /// <summary>
     /// Jokalari onenak bueltau
     /// </summary>
     /// <returns></returns>
-    public async Task<IActionResult> Jokalari_onenak()
+    public async Task<IActionResult> Jokoak()
     {
+
         return View();
     }
 
