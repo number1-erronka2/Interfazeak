@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="192.168.65.123" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="192.168.65.123">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa.sln" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/N1-WebAplikazioa.csproj" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Controllers/HomeController.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Controllers/PartidaController.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Controllers/RankingController.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Data/Migrations/00000000000000_CreateIdentitySchema.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Data/Migrations/ApplicationDbContextModelSnapshot.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Data/Migrations/00000000000000_CreateIdentitySchema.Designer.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Data/ApplicationDbContext.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Models/ErrorViewModel.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Models/Partida.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Models/Langilea.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Shared/Error.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Shared/_Layout.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Shared/_LoginPartial.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Shared/_ValidationScriptsPartial.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Shared/Error.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Shared/_Layout.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Shared/_LoginPartial.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Shared/_ValidationScriptsPartial.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Shared/_Layout.cshtml.css" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Home/Index.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Home/Privacy.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Home/Index.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Home/Privacy.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Partida/Edit.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Partida/Index.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Partida/Create.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Partida/Delete.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Partida/Details.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Partida/Create.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Partida/Delete.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Partida/Details.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Partida/Edit.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Partida/Index.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Ranking/Index.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/Ranking/Index.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/_ViewImports.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/_ViewStart.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/_ViewImports.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Views/_ViewStart.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Areas/Identity/Pages/_ViewStart.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Areas/Identity/Pages/_ViewStart.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/css/site.css" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/js/site.js" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap.css" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/js/bootstrap.js" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/bootstrap/LICENSE" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/jquery-validation/dist/additional-methods.js" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/jquery-validation/dist/jquery.validate.js" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/jquery-validation/dist/additional-methods.min.js" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/jquery-validation/LICENSE.md" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/jquery/dist/jquery.js" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/jquery/dist/jquery.min.js" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/jquery/dist/jquery.min.map" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/lib/jquery/LICENSE.txt" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/wwwroot/favicon.ico" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Properties/launchSettings.json" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/obj/Debug/net7.0/N1-WebAplikazioa.GlobalUsings.g.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/obj/Debug/net7.0/N1-WebAplikazioa.AssemblyInfo.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/obj/Debug/net7.0/N1-WebAplikazioa.RazorAssemblyInfo.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/obj/Debug/net7.0/N1-WebAplikazioa.GeneratedMSBuildEditorConfig.editorconfig" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Services/ILangileaService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Services/IPartidaService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Services/PartidaService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Services/LangileaService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/ViewComponents/LangileakViewComponent.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/ViewModels/PartidaViewModel.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/Program.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/app.db" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/appsettings.Development.json" web="/" />
+            <mapping local="$PROJECT_DIR$/N1-WebAplikazioa/appsettings.json" web="/" />
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

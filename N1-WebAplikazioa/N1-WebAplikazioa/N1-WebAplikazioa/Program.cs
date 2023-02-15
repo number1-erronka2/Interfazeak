@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Build.Framework;
 using Microsoft.EntityFrameworkCore;
 using MongoDB.Driver;
 using N1_WebAplikazioa.Data;
@@ -23,11 +24,21 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
+builder.WebHost.ConfigureKestrel(options => {
+    options.ListenAnyIP(5000);
+    options.ListenAnyIP(5001, listenOptions => {
+        listenOptions.UseHttps();
+    });
+});
+
+
 //Gure zerbitzuak
 builder.Services.AddScoped<IPartidaService, PartidaService>();
 builder.Services.AddScoped<ILangileaService, LangileaService>();
 
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment()) {
