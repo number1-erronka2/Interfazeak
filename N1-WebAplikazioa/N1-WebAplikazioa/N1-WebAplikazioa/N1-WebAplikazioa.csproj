@@ -6,6 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <UserSecretsId>aspnet-N1_WebAplikazioa-4D962664-DC8D-46C6-9C0F-0EB1ED8F95C3</UserSecretsId>
         <RootNamespace>N1_WebAplikazioa</RootNamespace>
+        <Authors>Number1</Authors>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
