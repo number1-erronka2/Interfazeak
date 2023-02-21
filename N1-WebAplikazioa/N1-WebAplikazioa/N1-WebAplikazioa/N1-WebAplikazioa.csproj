@@ -6,6 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <UserSecretsId>aspnet-N1_WebAplikazioa-4D962664-DC8D-46C6-9C0F-0EB1ED8F95C3</UserSecretsId>
         <RootNamespace>N1_WebAplikazioa</RootNamespace>
+        <Authors>Number1</Authors>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -13,6 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="AspNetCore.Reporting" Version="2.1.0" />
         <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.0" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.0" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.0" />
