@@ -9,4 +9,5 @@ public class ApplicationDbContext : IdentityDbContext {
         : base(options) {
     }
     public DbSet<N1_WebAplikazioa.Models.Partida> Partida { get; set; } = default!;
+    public object Balorazioa { get; set; }
 }

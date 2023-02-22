@@ -1,4 +1,6 @@
 ﻿@page
+@using N1_WebAplikazioa.ViewModels
+@using N1_WebAplikazioa.Controllers
 @model N1_WebAplikazioa.Views.Jokoak.Index
 
 @{
@@ -13,6 +15,12 @@
     <title>Jokoak</title>
 </head>
 <body>
+@try {
+    
+}
+catch {
+    <p>Errore bat egon da balorazioak irakurtzen</p>
+}
 <div>
     <h1>
         Jokoak
@@ -34,7 +42,7 @@
     <div style="display:flex; padding: 10px; margin: 10px 0;" class="w-100 bg-black bg-opacity-10">
         <img style="height:300px; width:500px; margin-right:10px;" alt="Pouni jokoaren argazkia" src="https://i.imgur.com/gOfO64M.png"/>
         <div class="flex-column  h-100">
-            <h2>Pouni - 3★</h2>
+            <h2>Pouni - 2★</h2>
             <h5>PcBox</h5>
             <p>Pouni jokoa</p>
             <div style="display: flex; align-items: end; height: 100%">
@@ -48,7 +56,7 @@
     <div style="display:flex; padding: 10px; margin: 10px 0;" class="w-100 bg-black bg-opacity-10">
         <img style="height:300px; width:500px; margin-right:10px;" alt="Zombie Killer jokoaren argazkia" src="https://i.imgur.com/NjmqCj9.png"/>
         <div class="flex-column  h-100">
-            <h2>Zombie Killer - 3★</h2>
+            <h2>Zombie Killer - 2★</h2>
             <h5>HJAA</h5>
             <p>Zombie Killer jokoa</p>
             <div style="display: flex;">
@@ -62,7 +70,7 @@
     <div style="display:flex; padding: 10px; margin: 10px 0;" class="w-100 bg-black bg-opacity-10">
         <img style="height:300px; width:500px; margin-right:10px;" alt="MAHI Kingdom jokoaren argazkia" src="https://i.imgur.com/jKbEAB1.png"/>
         <div class="flex-column  h-100">
-            <h2>MAHI kingdom - 3★</h2>
+            <h2>MAHI kingdom - 2★</h2>
             <h5>MAHI</h5>
             <p>MAHI kingdom jokoa</p>
             <div style="display: flex; align-items: end; height: 100%">
